@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jemmy 的小玩具</title>
+<!--
+  jemmychao.github.io 下找不到的地址都会落到这里（/Jemmy/ 项目站之外的路径）。
+  仓库名打成小写或别的大小写（/jemmy/…、/JEMMY/…）：改回 /Jemmy/ 后面原样保留；
+  其余一律带到 /Jemmy/。以 /Jemmy 开头的不再跳，免得项目站出问题时来回打转。
+-->
+<script>
+  (function () {
+    var p = location.pathname;
+    if (p === '/Jemmy' || p.indexOf('/Jemmy/') === 0) return;
+    var target = /^\/jemmy(\/|$)/i.test(p) ? '/Jemmy' + p.replace(/^\/jemmy/i, '') : '/Jemmy/';
+    if (target === '/Jemmy') target = '/Jemmy/';
+    location.replace(target);
+  })();
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #D9E9F2; color: #1F2A33; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
+  p { margin: 0 16px; text-align: center; }
+  a { color: #CF6650; }
+</style>
+</head>
+<body>
+  <p>这个网址没有找到，正在带你去 <a href="/Jemmy/">Jemmy 的小玩具</a>……</p>
+</body>
+</html>
